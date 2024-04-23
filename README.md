@@ -1,6 +1,6 @@
 # Temperature Converter App
 
-The Temperature Converter App is a mobile application built using Expo for native development. It allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin.
+The Temperature Converter App is a mobile application built using Expo for native development. It allows users to convert temperatures between Celsius, Fahrenheit.
 
 ## Installation
 
