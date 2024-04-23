@@ -21,10 +21,29 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "config": {
+        "signing": {
+          "keystorePath": "./assets/mykeystore.jks",
+          "keystorePassword": "12345678",
+          "keyAlias": "mykey",
+          "keyPassword": "12345678"
+        }
+      },
+      "sdkVersion": "32.0.0",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "package": "com.harishakahar.tempconvertor"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e95ce4bb-35fd-4dd7-aa9e-109761e900f4"
+      }
     }
   }
 }

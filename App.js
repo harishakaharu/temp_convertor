@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { appStyle } from "./styles/App.style";
+import { ImageBackground, Text } from "react-native";
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
+import Header from "./components/Header";
+import hot from "./assets/sunny.jpg";
+import cold from "./assets/cold.jpg";
+import { useState } from "react";
 export default function App() {
+  const [temp, setTemp] = useState("hot");
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ImageBackground
+      source={temp === "hot" ? hot : cold}
+      style={appStyle.backgroundImg}
+    >
+      <SafeAreaProvider>
+        <SafeAreaView style={appStyle.main}>
+          <Header temperature={setTemp} />
+        </SafeAreaView>
+      </SafeAreaProvider>
+    </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
